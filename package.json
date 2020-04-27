@@ -1,0 +1,9 @@
+{
+	"name": "ann",
+	"version": "1.0.0",
+	"description": "Artificial Neural Networks implementation",
+	"main": "index.js",
+	"author": "Fernando Azevedo",
+	"license": "MIT",
+	"type": "module"
+}
