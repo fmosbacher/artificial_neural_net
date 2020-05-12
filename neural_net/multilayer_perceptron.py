@@ -1,4 +1,5 @@
 import numpy as np
+from .dense_layer import DenseLayer
 
 class MultilayerPerceptron:
     """Simple neural net implementation."""
