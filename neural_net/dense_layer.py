@@ -10,6 +10,9 @@ def relu(values, deriv=False):
 
     return np.where(values > 0, values, values * alpha)
 
+def softmax(values, deriv=False):
+    pass
+
 class DenseLayer():
     """Dense neural net layer to build the MLP."""
 

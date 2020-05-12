@@ -19,6 +19,7 @@ class MultilayerPerceptron:
 
         return self.layers[-1].activated_outputs
 
+    # TODO: stop iteration with mse precision
     def train(self, inputs_batch, targets_batch, learning_rate=0.01, precision=0.0001):
         for i in range(10000):
             # Feedforward
@@ -34,7 +35,7 @@ class MultilayerPerceptron:
                 print('> Mean squared error:', np.mean(error ** 2))
 
             for layer in reversed(self.layers):
-                local_gradient = error * relu(layer.outputs, deriv=True)
+                local_gradient = error * layer.activation(layer.outputs, deriv=True)
 
                 # Update weights
                 layer.weights += learning_rate * np.dot(layer.inputs.T, local_gradient)
